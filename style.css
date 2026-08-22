@@ -850,6 +850,11 @@ footer {
   .credibility-grid {
     flex-direction: column;
   }
+  
+  .phone-link {
+    white-space: nowrap;
+    font-size: 0.9rem;
+  }
 }
 
 /* Floating WhatsApp Button */
