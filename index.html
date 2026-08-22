@@ -160,13 +160,13 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="services">
+    <section class="services">
         <div class="container">
             <h2 class="section-title">SERVICES</h2>
             <div class="section-banner-image">
                 <img src="./img/03-our-services-cleaning-bristol.jpg.png" alt="Our Services" style="width: 100%; height: auto; border-radius: 15px; margin-bottom: 3rem;">
             </div>
-            <div class="services-grid">
+            <div class="services-grid" id="services">
                 <!-- Card 1 -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-building"></i></div>
@@ -218,13 +218,13 @@
     </section>
 
     <!-- Gallery Section (Carousel) -->
-    <section class="gallery" id="portfolio">
+    <section class="gallery">
         <div class="container">
             <div class="section-banner-image">
                 <img src="./img/lumora-kitchen-cleaning-bristol.jpg.png" alt="Kitchen Cleaning" style="width: 100%; height: auto; border-radius: 15px; margin-bottom: 3rem;">
             </div>
         </div>
-        <div class="carousel-container" id="gallery-carousel">
+        <div class="carousel-container" id="portfolio">
             <div class="carousel-track">
                 <img src="./img/gallery/gallery-01-small-bathroom-cleaning-bristol.jpg.png" alt="Small Bathroom Cleaning Bristol">
                 <img src="./img/gallery/gallery-06-bedroom-cleaning-bristol.jpg.png" alt="Bedroom Cleaning Bristol">
@@ -296,12 +296,12 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq-section" id="faq">
+    <section class="faq-section">
         <div class="container">
             <div class="section-banner-image">
                 <img src="./img/lumora-domestic-cleaning-vacuum-bristol.jpg.png" alt="Vacuum Cleaning" style="width: 100%; height: auto; border-radius: 15px; margin-bottom: 3rem;">
             </div>
-            <h2 class="section-title" style="color: var(--text-color);">Frequently Asked Questions</h2>
+            <h2 class="section-title" id="faq" style="color: var(--text-color);">Frequently Asked Questions</h2>
             <div class="faq-grid">
                 <div class="faq-item">
                     <h3>How much do cleaning services cost in Bristol?</h3>
@@ -357,18 +357,68 @@
     </section>
 
     <!-- CTA Final Section -->
-    <section class="cta-final" id="contato">
+    <section class="cta-final" style="background-color: var(--secondary-color); padding: 80px 0;">
         <div class="container cta-final-container">
             <div class="section-banner-image">
                 <img src="./img/05-our-work-cleaning-bristol.jpg.png" alt="Our Work" style="width: 100%; height: auto; border-radius: 15px; margin-bottom: 3rem;">
             </div>
-            <h2>Get Your Free Quote — Contact Lumora</h2>
-            <p>Ready for a spotless and welcoming space? Don't wait—reach out today to secure your preferred cleaning schedule with Bristol's trusted professionals.</p>
-            <div class="cta-final-buttons">
-                <a href="https://wa.me/447341462757?text=I%20would%20like%20to%20get%20a%20free%20quote!" target="_blank" class="cta-button primary-cta">Get a Free Quote on WhatsApp</a>
-                <a href="tel:07341462757" class="cta-button secondary-cta">Call Us Now</a>
+            <div id="contato" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto; color: var(--text-color); text-align: left;">
+                
+                <!-- Contact Us Box -->
+                <div style="background: #f4f1eb; border-radius: 15px; padding: 2.5rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <p style="font-weight: 600; color: var(--primary-color); margin-bottom: 0.5rem; text-transform: uppercase;">Commercial and Domestic Cleaning Experts in Bristol</p>
+                    <h2 style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 2rem;">Contact Us</h2>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem; align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 10px; font-weight: 500; font-size: 1.1rem; color: var(--primary-color);">
+                            <i class="fas fa-location-arrow"></i> Bristol, England, GB
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; font-weight: 500; font-size: 1.1rem; color: var(--primary-color);">
+                            <i class="fas fa-envelope"></i> contact@lumoracleaningservices.co.uk
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; font-weight: bold; font-size: 1.3rem; color: var(--primary-color);">
+                            <i class="fas fa-phone-alt"></i> 0734 146 2757
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; gap: 15px; margin-top: 2rem; margin-bottom: 2rem;">
+                        <a href="#" style="color: var(--primary-color); font-size: 2rem;"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#" style="color: var(--primary-color); font-size: 2rem;"><i class="fab fa-instagram-square"></i></a>
+                    </div>
+                    
+                    <img src="./img/lumora-logo.png" alt="Lumora Cleaning Services" style="max-height: 80px;">
+                </div>
+
+                <!-- Quick Enquiry Box -->
+                <div style="background: #d4c4b7; border-radius: 15px; padding: 2.5rem;">
+                    <h2 style="font-size: 2rem; color: #fff; margin-bottom: 1.5rem;">Quick Enquiry</h2>
+                    <form id="whatsappForm" onsubmit="event.preventDefault(); window.open('https://wa.me/447341462757?text=' + encodeURIComponent('Hello, my name is ' + document.getElementById('q-name').value + '. I need a ' + document.querySelector('input[name=\'req\']:checked').value + ' cleaning service. ' + document.getElementById('q-msg').value), '_blank');">
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                            <input type="text" id="q-name" placeholder="Name" required style="width: 100%; padding: 10px; border: none; border-radius: 5px;">
+                            <input type="email" placeholder="E-mail" style="width: 100%; padding: 10px; border: none; border-radius: 5px;">
+                        </div>
+                        <input type="tel" placeholder="Mobile" required style="width: 100%; padding: 10px; border: none; border-radius: 5px; margin-bottom: 1.5rem;">
+                        
+                        <p style="color: var(--text-color); font-weight: 600; margin-bottom: 0.5rem;">Requirement</p>
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; color: var(--text-color);">
+                            <label><input type="radio" name="req" value="Domestic" required> Domestic</label>
+                            <label><input type="radio" name="req" value="Commercial"> Commercial</label>
+                        </div>
+                        
+                        <p style="color: var(--text-color); font-weight: 600; margin-bottom: 0.5rem;">How did you hear about us? (*)</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 1.5rem; color: var(--text-color); font-size: 0.9rem;">
+                            <label><input type="checkbox"> Search Engine</label>
+                            <label><input type="checkbox"> Social Media</label>
+                            <label><input type="checkbox"> Friends or Family</label>
+                            <label><input type="checkbox"> Other</label>
+                        </div>
+                        
+                        <textarea id="q-msg" placeholder="Message" rows="4" style="width: 100%; padding: 10px; border: none; border-radius: 5px; margin-bottom: 1rem;"></textarea>
+                        
+                        <button type="submit" style="background: #2b2b2b; color: #fff; padding: 10px 30px; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: 0.3s;">Submit (WhatsApp)</button>
+                    </form>
+                </div>
             </div>
-            <p class="support-text">We typically reply within a few hours during business days.</p>
         </div>
     </section>
 
