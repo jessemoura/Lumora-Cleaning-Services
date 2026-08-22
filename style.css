@@ -852,8 +852,23 @@ footer {
   }
   
   .phone-link {
-    white-space: nowrap;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+  }
+  
+  .phone-text {
+    display: none;
+  }
+  
+  .nav-container {
+    padding: 0 1rem;
+  }
+  
+  .logo img {
+    height: 70px;
+  }
+  
+  .header-contact {
+    gap: 0.8rem;
   }
 }
 
